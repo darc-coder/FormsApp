@@ -14,18 +14,44 @@
     <div class="container">
         <div class="card">
             <div class="left-image">
-
+                <div class="img-circle-anim"></div>
+                <div class="img-circle-main"></div>
+                <div class="calendar-img">
+                    <div class="top">
+                        <span class="circle"><span class="line"></span></span>
+                        <span class="circle"><span class="line"></span></span>
+                        <span class="circle"><span class="line"></span></span>
+                        <span class="circle"><span class="line"></span></span>
+                    </div>
+                    <div class="bottom">
+                        <div class="text" id="month-text">OCT</div>
+                    </div>
+                </div>
+                <!-- <svg class="img-fluid" id="outputsvg" xmlns="http://www.w3.org/2000/svg"
+                    style="transform: none; transform-origin: 50% 50%; cursor: move; max-height: none; transition: none 0s ease 0s;"
+                    width="510" height="698" viewBox="0 0 5100 6980">
+                    <g id="l7LjfrNRyGqQ2olLGQf50CS" fill="rgb(69,70,180)" style="transform: none;">
+                    </g>
+                    <g id="l6fWB16UyAleilfQdXi2htV" fill="rgb(242,227,238)" style="transform: none;">
+                    </g>
+                    <g id="l4bRTMtsJDZ8a9roHrsiN2K" fill="rgb(238,240,254)" style="transform: none;">
+                    </g>
+                </svg> -->
             </div>
             <div class="right-form">
                 <form action="_blank" method="post">
                     <label for="domainId"> Domain ID
                         <input type="text" id="domainId">
                     </label>
-                    <label for="domainId"> Full Name
+                    <label for="fullName"> Full Name
                         <input type="text" id="fullName">
                     </label>
-                    <label for="domainId"> Select Monh and Year
-                        <input type="date" name="date" id="date">
+                    <label for="month"> Select Month and Year
+                        <input type="month" name="month" id="month">
+                    </label>
+                    <label for="completed"> Did you sent status report
+                        <input type="radio" name="completed"> Yes
+                        <input type="radio" name="completed"> No
                     </label>
                 </form>
             </div>
