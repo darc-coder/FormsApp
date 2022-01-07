@@ -56,30 +56,25 @@ function AnimateCircle() {
 
 AnimateCircle();
 
-const data = {
-    abcd1234: {
-        fullName: "abcd efgh",
-        sentMonths: {
-            Nov2021: true,
-            Dec2021: false
-        },
-        extraInfo: {
-            Nov2021: "will send"
-        }
-    }
+let data = {};
+async function LoadData() {
+    const fetchResponse = await fetch('/data');
+    data = await fetchResponse.json();
 }
+LoadData().then(r => r);
+
 function getDomainIds() {
     return Object.keys(data)
 }
 
 function getFullNames(_singleDomainId = "") {
     if (_singleDomainId && data.hasOwnProperty(_singleDomainId))
-        return data[_singleDomainId].fullName;
+        return data[_singleDomainId]["fullName"];
 
     let allNames = [];
     for (const key in data) {
         const element = data[key];
-        allNames.push(element.fullName);
+        allNames.push(element["fullName"]);
     }
     return allNames.sort();
 }
