@@ -9,5 +9,6 @@
 ## Back End:
 - Tomcat Server
 - Java Servlets
+- Java Server Pages
 - ### Data Storage:
 - JSON file
